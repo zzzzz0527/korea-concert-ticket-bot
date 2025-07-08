@@ -52,18 +52,6 @@ async function findSeat() {
             seat[i].dispatchEvent(clickEvent);
             frame.document.getElementById("nextTicketSelection").click();
             return true;
-        }
-        const iftttKey = "dAbC12dEfGhIjK34lMnOpQrS"; // 
-        const eventName = "melon_ticket";
-        const url = `https://maker.ifttt.com/trigger/${eventName}/with/key/$
-{iftttKey}';
-    fetch(url,{
-        method:'POST',
-        headers: {'Content-Type': 'application/json'}, 
-        body: JSON.stringify(data)
-    }).catch(e => console.log('通知发送失败'));
-    
-    return true;
     }
     return false;
 }
